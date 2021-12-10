@@ -1,0 +1,13 @@
+{
+  "extends": "@dsc/configs/tsconfig.svelte.json",
+  "compilerOptions": {
+    "outDir": "./dist",
+    "lib": ["ESNext"]
+  },
+  "references": [
+    {
+      "path": "../and-utils"
+    }
+  ],
+  "include": ["src/**/*.ts", "src/**/*.d.ts"]
+}

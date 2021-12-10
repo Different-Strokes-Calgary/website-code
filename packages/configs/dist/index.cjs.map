@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../index.ts", "../tsup.base.ts"],
+  "sourcesContent": ["export * from './tsup.base.js'\n", "import type { Options } from 'tsup'\n\nexport const baseTsup: Options = {\n  splitting: false,\n  sourcemap: true,\n  clean: true,\n  dts: true,\n  format: ['esm'],\n  minify: true\n}\n"],
+  "mappings": "qIAAA,4BCEO,GAAM,GAAoB,CAC/B,UAAW,GACX,UAAW,GACX,MAAO,GACP,IAAK,GACL,OAAQ,CAAC,OACT,OAAQ",
+  "names": []
+}

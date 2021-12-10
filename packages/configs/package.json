@@ -1,0 +1,28 @@
+{
+  "name": "@dsc/configs",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AndASM/DifferentStrokes.git",
+    "directory": "packages/configs"
+  },
+  "license": "GPL-3.0-or-later",
+  "devDependencies": {
+    "tsup": "^5",
+    "tslib": "^2",
+    "trash-cli": "^4"
+  },
+  "scripts": {
+    "build": "tsup-node",
+    "clean": "trash dist"
+  },
+  "type": "module",
+  "main": "dist/index.js",
+  "exports": {
+    "./*.json": "./*.json",
+    "./*.js": "./*.js",
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  }
+}

@@ -1,0 +1,84 @@
+html
+    head
+    body
+        svg(viewBox='0 0 100 100' height='100%' xmlns:xlink='http://www.w3.org/1999/xlink',
+            xmlns='http://www.w3.org/2000/svg',)
+            defs
+                filter#LiquidFilter(x='0', y='0', width='1', height='1', color-interpolation-filters='sRGB')
+                    feFlood#feFlood16494(flood-color='#9EECFE', result='result9', flood-opacity='1')
+                    feGaussianBlur#feGaussianBlur16496(stdDeviation='1', result='result8', in='SourceGraphic')
+                    feTurbulence#wavesTurbulence(
+                        seed='244',
+                        result='result7b',
+                        type='turbulence',
+                        numOctaves='1',
+                        baseFrequency='0.029999999999999999 0.029999999999999999'
+                    )
+                    feColorMatrix#feColorMatrix16622(
+                        result='result5',
+                        values='1.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 2.0000000 0.0000000',
+                        type='matrix'
+                    )
+                    feMerge#feMerge16630(result='result12')
+                        feMergeNode#feMergeNode16626(in='result5')
+                    feTurbulence#feTurbulence16606(
+                        seed='279',
+                        result='result7b',
+                        type='turbulence',
+                        numOctaves='1',
+                        baseFrequency='0.029999999999999999 0.029999999999999999'
+                    )
+                    feColorMatrix#feColorMatrix16500(
+                        result='result5',
+                        values='1.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 2.0000000 0.0000000',
+                        type='matrix'
+                    )
+                    feMerge#feMerge16610(result='result12')
+                        feMergeNode#feMergeNode16612(in='result12')
+                        feMergeNode#feMergeNode16624(in='result5')
+                    feColorMatrix#feColorMatrix16632(
+                        result='result5',
+                        values='1.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 1.5000000 0.0000000',
+                        type='matrix'
+                    )
+                    feComposite#feComposite16502(in2='result8', result='result6', operator='in', in='result8')
+                    feDisplacementMap#feDisplacementMap16504(
+                        in2='result6',
+                        in='result5',
+                        xChannelSelector='A',
+                        yChannelSelector='A',
+                        scale='100',
+                        result='result4'
+                    )
+                    feComposite#feComposite16506(in2='result4', result='result2', operator='in', in='result8')
+                    feComposite#feComposite16508(
+                        in2='result2',
+                        result='fbSourceGraphic',
+                        in='SourceGraphic',
+                        operator='in'
+                    )
+                    feMerge#feMerge16516(result='result10')
+                        feMergeNode#feMergeNode16510(in='result9')
+                        feMergeNode#feMergeNode16604(in='fbSourceGraphic')
+                    feColorMatrix#feColorMatrix17368(
+                        values='1.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.50000000 0.0000000'
+                    )
+                    feComposite#feComposite16518(operator='over', result='result11', in2='SourceGraphic')
+                filter#filterTest(x='-20%' y='-20%' width='140%' height='140%')
+                    feFlood(x='0' y='0' width='100' height='100' flood-color='#1c6cb5' result='outline')
+                    feFlood(flood-color='#53a9de' result='fill' x='4' y='4' width='92' height='92')
+                    feComposite(in='fill' in2='outline')
+                    feTile(result='tiles')
+                    feTurbulence(numOctaves="1" seed="2" baseFrequency="0.002 0.005")
+                    feColorMatrix(type="matrix"
+                        values=`0 0 0 0 0
+                                0 0 0 0 0
+                                0 0 0 0 0
+                                0 0 0 1 0`)
+                    feGaussianBlur(stdDeviation='20')
+                    feDisplacementMap(scale="70" in="tiles" xChannelSelector="A" yChannelSelector="A")
+                    feGaussianBlur(stdDeviation='2')
+                symbol#output(viewBox='0 0 2000 2000')
+                    rect(x="0" y="0" width='100%' height='100%' filter='url(#filterTest)')
+
+            use(href='#output' x=0 y=0 width='100%' height='100%' filter='url(#LiquidFilter)')

@@ -1,0 +1,23 @@
+{
+  "name": "@dsc/utils",
+  "version": "0.0.1",
+  "description": "",
+  "type": "module",
+  "main": "./dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "clean": "trash dist"
+  },
+  "keywords": [],
+  "author": "AndASM",
+  "license": "",
+  "devDependencies": {
+    "@dsc/configs": "workspace:*",
+    "tslib": "^2.3.1",
+    "tsup": "^5",
+    "trash-cli": "^4"
+  }
+}

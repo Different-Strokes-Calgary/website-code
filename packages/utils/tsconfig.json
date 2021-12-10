@@ -1,0 +1,11 @@
+{
+  "extends": "@dsc/configs/tsconfig.svelte.json",
+  "compilerOptions": {
+    "baseUrl": "./src",
+    "outDir": "./dist",
+    "paths": {
+      "$self": ["./index.ts"]
+    }
+  },
+  "include": ["src/**/*.ts", "src/**/*.d.ts"]
+}

@@ -1,0 +1,4 @@
+!.env*
+!.gitignore
+!tsm*.js
+!tsconfig*.json

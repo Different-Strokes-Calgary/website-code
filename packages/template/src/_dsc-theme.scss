@@ -1,0 +1,21 @@
+@use 'lib/bs/variables' as *;
+
+@font-face {
+  font-family: DSCLogo;
+  src: url(/DSCLogo.woff2);
+}
+
+.corporate-icon {
+  fill: $text-muted;
+  margin: 0.2rem;
+  width: 1rem;
+  height: 1rem;
+}
+
+.corporate-icons > svg {
+  @extend .corporate-icon;
+}
+
+.smaller {
+  font-size: 0.75em;
+}

@@ -1,0 +1,22 @@
+{
+  "name": "@dsc/no-experimental-warnings",
+  "version": "0.0.1",
+  "description": "",
+  "type": "module",
+  "types": "./dist/index.d.ts",
+  "main": "./dist/index.js",
+  "scripts": {
+    "build": "tsup-node",
+    "clean": "trash ./dist"
+  },
+  "keywords": [],
+  "author": "AndASM",
+  "license": "",
+  "devDependencies": {
+    "@dsc/configs": "workspace:*",
+    "@types/node": "^16.10.9",
+    "tslib": "^2.3.1",
+    "tsup": "^5.5.0",
+    "trash-cli": "^4.0.0"
+  }
+}

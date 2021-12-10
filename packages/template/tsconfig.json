@@ -1,0 +1,15 @@
+{
+  "extends": "@dsc/configs/tsconfig.svelte.json",
+  "compilerOptions": {
+    "paths": {
+      "$lib": ["src/lib"],
+      "$lib/*": ["src/lib/*"]
+    }
+  },
+  "include": [
+    "template/src/**/*.d.ts",
+    "template/src/**/*.js",
+    "template/src/**/*.ts",
+    "template/src/**/*.svelte"
+  ]
+}

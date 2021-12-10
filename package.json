@@ -1,0 +1,24 @@
+{
+  "name": "@dsc/different-strokes-calgary",
+  "version": "0.0.1",
+  "type": "module",
+  "packageManager": "pnpm@6.23.2",
+  "private": true,
+  "license": "GPL-3.0-or-later",
+  "devDependencies": {
+    "pnpm": "6.23.2",
+    "trash-cli": "^4",
+    "ultra-runner": "^3",
+    "prettier": "^2.4.1"
+  },
+  "dependencies": {
+    "@dsc/website": "workspace:*",
+    "@dsc/template": "workspace:*"
+  },
+  "scripts": {
+    "build": "ultra -r --build",
+    "preview": "ultra build && pnpm run -r preview",
+    "dev": "pnpm run -r dev",
+    "pages": "ultra -r --build pages"
+  }
+}

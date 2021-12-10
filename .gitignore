@@ -1,0 +1,9 @@
+.DS_Store
+node_modules
+.ultra.cache.json
+/build
+/.svelte-kit
+/package
+!/packages
+/packages/*/build
+/packages/*/.svelte-kit

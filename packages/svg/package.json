@@ -1,0 +1,35 @@
+{
+  "name": "@dsc/svg",
+  "version": "0.0.1",
+  "description": "",
+  "type": "module",
+  "types": "./dist/index.d.ts",
+  "main": "./dist/index.js",
+  "exports": {
+    "import": {
+      "tsm": "./src/index.ts",
+      "default": "./dist/index.js"
+    },
+    "require": "./dist/index.cjs"
+  },
+  "scripts": {
+    "build": "tsup-node",
+    "clean": "trash dist"
+  },
+  "keywords": [],
+  "author": "AndASM",
+  "license": "",
+  "dependencies": {
+    "html2pug": "^4.0.0",
+    "pug": "^3.0.2",
+    "svgo": "^2.7.0"
+  },
+  "devDependencies": {
+    "@types/svgo": "^2.6.0",
+    "@dsc/utils": "workspace:*",
+    "@dsc/configs": "workspace:*",
+    "tslib": "^2.3.1",
+    "tsup": "^5",
+    "trash-cli": "^4"
+  }
+}

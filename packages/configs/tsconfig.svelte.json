@@ -1,0 +1,36 @@
+{
+  "compilerOptions": {
+    "moduleResolution": "node",
+    "module": "ESNext",
+    "lib": ["ESNext", "DOM"],
+    "target": "es2020",
+    "importsNotUsedAsValues": "error", // svelte-preprocess limitation
+    "importHelpers": true,
+    "isolatedModules": true,
+    "resolveJsonModule": true,
+    "sourceMap": true, // Svelte compiler needs source maps
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "useDefineForClassFields": true,
+    "allowJs": true,
+    "checkJs": true, // Type comments for svelte config
+    "declarationMap": true,
+    // For paths
+    /* Example paths
+    // Paths must be defined per-package, paths are relative to tsconfig.json
+    "baseUrl": ".",
+   "paths": {
+      "$lib": ["src/lib"],
+      "$lib/*": ["src/lib/*"],
+      "$images": ["src/images"],
+      "$images/*": ["src/images/*"],
+      "$pages": ["src/pages"],
+      "$pages/*": ["src/pages/*"]
+    }
+    */
+  }
+  // Example include
+  // Includes must be defined per-package, paths are relative to tsconfig.json
+  //"include": ["src/**/*.d.ts", "src/**/*.js", "src/**/*.ts", "src/**/*.svelte", "src/**/*.svx", "src/**/*.md"]
+}

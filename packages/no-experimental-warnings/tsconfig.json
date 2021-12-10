@@ -1,0 +1,13 @@
+{
+  "extends": "@tsconfig/node16",
+
+  "compilerOptions": {
+    "module": "esnext",
+    "moduleResolution": "node",
+    "importsNotUsedAsValues": "error",
+    "importHelpers": true,
+    "outDir": "./dist",
+    "types": ["node"],
+    "sourceMap": true
+  }
+}
