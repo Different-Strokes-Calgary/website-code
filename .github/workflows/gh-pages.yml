@@ -1,4 +1,4 @@
-name: NodeJS with pnpm and SvelteKit
+name: Publish SvelteKit with pnpm to Github Pages
 
 on:
   push:
@@ -13,8 +13,9 @@ jobs:
     steps:
     - uses: actions/checkout@v2
       with:
+        token: ${{ github.token }}
         submodules: recursive
-    
+
     - name: Cache pnpm modules
       uses: actions/cache@v2
       with:
@@ -32,5 +33,12 @@ jobs:
         node-version: '16'
     - name: Install dependencies
       run: pnpm install
-    - name: Build Github Pages
-      run: pnpm run pages
+    - name: Build website
+      run: pnpx ultra build
+    - name: Upload github pages
+      uses: JamesIves/github-pages-deploy-action@4.1.7
+      with:
+        branch: gh-pages
+        folder: packages/template/build
+        single-commit: true
+        clean: true
