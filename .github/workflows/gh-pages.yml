@@ -33,4 +33,4 @@ jobs:
     - name: Install dependencies
       run: pnpm install
     - name: Build Github Pages
-      run: pnpx ultra pages
+      run: pnpm run pages
