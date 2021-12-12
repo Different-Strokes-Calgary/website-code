@@ -1,0 +1,20 @@
+{
+  "name": "@dsc/scripts",
+  "version": "0.0.1",
+  "type": "module",
+  "scripts": {
+    "pug2svg": "tsm pug2svg.ts"
+  },
+  "devDependencies": {
+    "@dsc/configs": "workspace:*",
+    "@dsc/svg": "workspace:*",
+    "@dsc/utils": "workspace:*",
+    "@dsc/website": "workspace:*",
+    "@dsc/misc": "workspace:*",
+    "svgpath": "^2.3.1",
+    "tslib": "^2.3.1",
+    "tsm": "^2.2.1"
+  },
+  "dependencies": {
+  }
+}

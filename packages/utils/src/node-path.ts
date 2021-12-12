@@ -3,6 +3,7 @@ import node_fs from 'fs'
 import path from 'path'
 import node_path from 'path'
 import URL from 'url'
+import { createRequire } from 'module'
 import { Path } from './path.js'
 import type { PathLike } from './types.js'
 
@@ -70,5 +71,11 @@ export class NodePath extends Path {
         }
       }
     } while (entry)
+  }
+
+  static moduleRoot(moduleName: string): NodePath {
+    const require = createRequire(import.meta.url)
+    const pathName = require.resolve(moduleName)
+    return new NodePath(pathName)
   }
 }

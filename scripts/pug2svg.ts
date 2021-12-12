@@ -1,10 +1,18 @@
-import * as andsvg from 'and-svg'
+import * as dscSvg from '@dsc/svg'
 import { NodePath } from '@dsc/utils'
 
-const inDir = new NodePath('images')
-const outDir = new NodePath('Assets/svg')
+const inDir = new NodePath('website/images')
+const outDir = new NodePath('misc/svg')
 
-outDir.rm()
-outDir.makeDir()
+await main()
 
-andsvg.utils.convertTemplateDirectory(inDir, outDir)
+async function pug2svg() {
+  outDir.rm()
+  outDir.makeDir()
+
+  dscSvg.utils.convertTemplateDirectory(inDir, outDir)
+}
+
+async function main() {
+  console.log(NodePath.moduleRoot('@dsc/svg'))
+}

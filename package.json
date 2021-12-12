@@ -2,11 +2,11 @@
   "name": "@dsc/different-strokes-calgary",
   "version": "0.0.1",
   "type": "module",
-  "packageManager": "pnpm@6.23.2",
+  "packageManager": "pnpm@6.23.6",
   "private": true,
   "license": "GPL-3.0-or-later",
   "devDependencies": {
-    "pnpm": "6.23.2",
+    "pnpm": "6.23.6",
     "trash-cli": "^4",
     "ultra-runner": "^3",
     "prettier": "^2.4.1"

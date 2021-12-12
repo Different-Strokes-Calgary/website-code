@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "moduleResolution": "Node",
+    "module": "ESNext",
+    "target": "ESNext",
+    "importsNotUsedAsValues": "error", // svelte-preprocess limitation
+    "importHelpers": true,
+    "isolatedModules": true,
+    "resolveJsonModule": true,
+    "sourceMap": true, // Svelte compiler needs source maps
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "useDefineForClassFields": true,
+    "allowJs": true,
+    "checkJs": true, // Type comments for svelte config
+    "declarationMap": true
+  }
+}
