@@ -179,10 +179,8 @@ importers:
 
   website:
     specifiers:
-      '@dsc/template': workspace:^0.0.1
       svelte: ^3.34.0
     devDependencies:
-      '@dsc/template': link:../packages/template
       svelte: 3.44.1
 
 packages:

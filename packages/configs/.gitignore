@@ -1,4 +1,8 @@
+dist
+node_modules
 !.env*
 !.gitignore
 !tsm*.js
 !tsconfig*.json
+!/package.json
+!/index.ts

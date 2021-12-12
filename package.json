@@ -19,6 +19,6 @@
     "build": "ultra -r --build",
     "preview": "ultra build && pnpm run -r preview",
     "dev": "pnpm run -r dev",
-    "pages": "ultra -r --build pages"
+    "pages": "ultra build && ultra -r pages"
   }
 }
