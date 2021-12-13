@@ -6,11 +6,13 @@
   "types": "./dist/index.d.ts",
   "main": "./dist/index.js",
   "exports": {
-    "import": {
+    "./*.json": "./*.json",
+    ".": {
       "tsm": "./src/index.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs",
       "default": "./dist/index.js"
-    },
-    "require": "./dist/index.cjs"
+    }
   },
   "scripts": {
     "build": "tsup-node",

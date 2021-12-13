@@ -12,6 +12,10 @@
       <excludeFolder url="file://$MODULE_DIR$/packages/template/build" />
       <excludeFolder url="file://$MODULE_DIR$/packages/template/.svelte-kit" />
       <excludeFolder url="file://$MODULE_DIR$/packages/template/node_modules" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/utils/dist" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/configs/dist" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/no-experimental-warnings/dist" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/svg/dist" />
     </content>
     <content url="file://$MODULE_DIR$/packages/template/node_modules" />
     <orderEntry type="inheritedJdk" />

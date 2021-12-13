@@ -1,5 +1,5 @@
-import type { PathLike } from '@dsc/utils'
-import * as utils from '@dsc/utils'
+import type { PathLike } from '@dsc/utils/node'
+import * as utils from '@dsc/utils/node'
 import SvgTemplate from './svg-template'
 import { templateForFile } from './templates'
 

@@ -4,11 +4,12 @@
   "description": "",
   "type": "module",
   "main": "./dist/index.js",
+  "types": "index.d.ts",
   "files": [
     "dist"
   ],
   "scripts": {
-    "build": "tsup",
+    "build": "tsup-node",
     "clean": "trash dist"
   },
   "keywords": [],
@@ -19,5 +20,21 @@
     "tslib": "^2.3.1",
     "tsup": "^5",
     "trash-cli": "^4"
+  },
+  "exports": {
+    "./*.json": "./*.json",
+    "./*.js": "./*.js",
+    "./node": {
+      "tsm": "./src/node/index.ts",
+      "import": "./dist/node/index.js",
+      "require": "./dist/node/index.cjs",
+      "default": "./dist/node/index.js"
+    },
+    ".": {
+      "tsm": "./src/index.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs",
+      "default": "./dist/index.js"
+    }
   }
 }

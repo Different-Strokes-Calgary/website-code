@@ -5,6 +5,6 @@ export const baseTsup: Options = {
   sourcemap: true,
   clean: true,
   dts: true,
-  format: ['esm'],
+  format: ['esm', 'cjs'],
   minify: true
 }

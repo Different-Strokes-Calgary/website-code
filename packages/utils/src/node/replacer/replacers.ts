@@ -1,4 +1,4 @@
-import { ArrayReplacement, Directory, NodePath, Replacers, ViteReplacement } from '$self'
+import { ArrayReplacement, Directory, NodePath, Replacers, ViteReplacement } from '../index.js'
 
 export const replacers: Replacers = {
   DirListingReplacer: {

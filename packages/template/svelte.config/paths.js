@@ -1,7 +1,7 @@
-import { NodePath } from '@dsc/utils'
+import { NodePath } from '@dsc/utils/node'
 import * as website from '@dsc/website'
 
-/** @type {import('@dsc/utils').fs.NodePath} */
+/** @type {import('@dsc/utils/node').NodePath} */
 export const project_path = new NodePath(new URL(import.meta.url)).parent.parent
 export const website_path = new NodePath(website.module_path)
 export const workspace_path = website_path.parent

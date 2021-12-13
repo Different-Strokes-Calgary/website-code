@@ -1,12 +1,16 @@
 import adapterStatic from '@sveltejs/adapter-static'
-import { replacer } from '@dsc/utils'
+import { replacer } from '@dsc/utils/node'
 import { replaceCodePlugin } from 'vite-plugin-replace'
-import { images_path, pages_path, project_path, website_path } from '@dsc/template/svelte.config/paths.js'
+import {
+  images_path,
+  pages_path,
+  project_path,
+  website_path
+} from '@dsc/template/svelte.config/paths.js'
 import { extensions, file_list } from '@dsc/template/svelte.config/defines.js'
 import { generatePagesFile } from '@dsc/template/svelte.config/functions.js'
 import { preprocessConfig } from '@dsc/template/svelte.config/preprocess.js'
 import { viteConfig } from '@dsc/template/svelte.config/vite.js'
-
 
 generatePagesFile()
 

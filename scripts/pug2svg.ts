@@ -1,8 +1,8 @@
 import * as dscSvg from '@dsc/svg'
-import { NodePath } from '@dsc/utils'
+import { NodePath } from '@dsc/utils/node'
 
-const inDir = new NodePath('website/images')
-const outDir = new NodePath('misc/svg')
+const inDir = NodePath.moduleRoot('@dsc/website').join('images')
+const outDir = NodePath.moduleRoot('@dsc/misc').join('svg')
 
 await main()
 
@@ -14,5 +14,5 @@ async function pug2svg() {
 }
 
 async function main() {
-  console.log(NodePath.moduleRoot('@dsc/svg'))
+  await pug2svg()
 }

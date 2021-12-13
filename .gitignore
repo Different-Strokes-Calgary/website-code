@@ -7,3 +7,4 @@ node_modules
 !/packages
 /packages/*/build
 /packages/*/.svelte-kit
+dist

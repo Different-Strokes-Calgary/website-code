@@ -1,11 +1,10 @@
 import fs from 'fs'
 import node_fs from 'fs'
-import path from 'path'
 import node_path from 'path'
 import URL from 'url'
 import { createRequire } from 'module'
-import { Path } from './path.js'
-import type { PathLike } from './types.js'
+import { Path } from '../path.js'
+import type { PathLike } from '../types.js'
 
 export class NodePath extends Path {
   constructor(path: PathLike) {
@@ -64,7 +63,7 @@ export class NodePath extends Path {
     do {
       entry = dir.readSync()
       if (entry) {
-        const entryPath = this.clone(path.join(this.fullName, entry.name))
+        const entryPath = this.clone(node_path.join(this.fullName, entry.name))
         if (entry.isDirectory()) yield* entryPath.recursiveDir()
         else {
           if (!match || (match && match.test(entryPath.fullName))) yield entryPath
@@ -75,7 +74,7 @@ export class NodePath extends Path {
 
   static moduleRoot(moduleName: string): NodePath {
     const require = createRequire(import.meta.url)
-    const pathName = require.resolve(moduleName)
-    return new NodePath(pathName)
+    const pathName = require.resolve(moduleName + '/package.json')
+    return new NodePath(pathName).parent
   }
 }

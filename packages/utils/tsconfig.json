@@ -4,8 +4,13 @@
     "baseUrl": "./src",
     "outDir": "./dist",
     "paths": {
-      "$self": ["./index.ts"]
+      "@dsc/utils": ["index.ts"],
+      "@dsc/utils/node": ["index-node.ts"]
     }
   },
-  "include": ["src/**/*.ts", "src/**/*.d.ts"]
+  "include": ["src/**/*.ts", "src/**/*.d.ts"],
+  "exclude": ["src/index*.ts", "src/**/*node*.ts",
+    "src/node/node-path.ts",
+    "src/node/index-node.ts"
+  ]
 }

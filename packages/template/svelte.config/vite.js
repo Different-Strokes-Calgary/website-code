@@ -1,6 +1,6 @@
 import { images_path, pages_path, project_path } from './paths.js'
 import { replaceCodePlugin } from 'vite-plugin-replace'
-import { replacer } from '@dsc/utils'
+import { replacer } from '@dsc/utils/node'
 
 export const viteConfig = {
   resolve: {
