@@ -11,34 +11,45 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-    - uses: actions/checkout@v2
-      with:
-        token: ${{ github.token }}
-        submodules: recursive
+      - name: Fix ACT
+        if: ${{ env.ACT }}
+        run: |
+          sudo chown -R $USER:docker .
+          sudo chmod a+rw /toolcache
+          [ -d /toolcache/pnpm-store ] || mkdir /toolcache/pnpm-store
+          ln -s /toolcache/pnpm-store ~/.pnpm-store
+          ln -s /toolcache/pnpm-store .pnpm-store
 
-    - name: Cache pnpm modules
-      uses: actions/cache@v2
-      with:
-        path: ~/.pnpm-store
-        key: ${{ runner.os }}-${{ hashFiles('**/pnpm-lock.yaml') }}
-        restore-keys: |
-          ${{ runner.os }}-
-    - name: Use pnpm
-      uses: pnpm/action-setup@v2.0.1
-      with:
-        version: '6.23.6'
-    - name: Use Node.js
-      uses: actions/setup-node@v2
-      with:
-        node-version: '16'
-    - name: Install dependencies
-      run: pnpm install
-    - name: Build website
-      run: pnpx ultra build
-    - name: Upload github pages
-      uses: JamesIves/github-pages-deploy-action@4.1.7
-      with:
-        branch: gh-pages
-        folder: packages/template/build
-        single-commit: true
-        clean: true
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ github.token }}
+          submodules: recursive
+
+      - name: Cache pnpm modules
+        if: ${{ !env.ACT }}
+        uses: actions/cache@v2
+        with:
+          path: ~/.pnpm-store
+          key: ${{ runner.os }}-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-
+      - name: Use pnpm
+        uses: pnpm/action-setup@v2.0.1
+        with:
+          version: '6.23.6'
+      - name: Use Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '16'
+      - name: Install dependencies
+        run: pnpm install
+      - name: Build website
+        run: pnpx ultra --raw --recursive --build
+      - name: Upload github pages
+        if: ${{ !env.ACT }}
+        uses: JamesIves/github-pages-deploy-action@4.1.7
+        with:
+          branch: gh-pages
+          folder: packages/template/build
+          single-commit: true
+          clean: true
