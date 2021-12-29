@@ -13,7 +13,7 @@
 
 <Navbar dark expand="md">
   <NavbarBrand class="me-auto" href="/">
-    <Svg name="Logo-in-Circle" style="--logo-background-color: #fff" width="24px" />
+    <Svg name="Logo-in-Circle" style="--logo-background-color: #fff" width="32px" />
     <span class="collapse-title">Different Strokes Calgary</span>
   </NavbarBrand>
   <NavbarToggler class="me-2" id="nav-toggler" />
