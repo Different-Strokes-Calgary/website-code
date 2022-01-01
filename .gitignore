@@ -8,3 +8,4 @@ node_modules
 /packages/*/build
 /packages/*/.svelte-kit
 dist
+.pnpm-debug.log

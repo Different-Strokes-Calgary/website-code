@@ -7,6 +7,7 @@ import autoprefixer from 'autoprefixer'
 import { mdsvex } from 'mdsvex'
 import rehypeSlug from 'rehype-slug'
 import remarkGfm from 'remark-gfm'
+import remarkEmoji from 'remark-emoji'
 import { extensions, mdsvex_extensions } from './defines.js'
 
 /** @type {import('svelte/types/compiler/preprocess').PreprocessorGroup[]} */
@@ -38,7 +39,7 @@ export const preprocessConfig = [
       extensions: extensions,
       layout: './src/lib/MDLayout.svelte',
       rehypePlugins: [rehypeSlug],
-      remarkPlugins: [remarkGfm]
+      remarkPlugins: [remarkGfm, remarkEmoji]
     })
   }),
   mdsvex({
