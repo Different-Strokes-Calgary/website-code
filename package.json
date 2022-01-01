@@ -7,13 +7,13 @@
   "license": "GPL-3.0-or-later",
   "devDependencies": {
     "pnpm": "6.23.6",
-    "trash-cli": "^4",
-    "ultra-runner": "^3",
-    "prettier": "^2.4.1"
+    "prettier": "^2.5.1",
+    "trash-cli": "^4.0.0",
+    "ultra-runner": "^3.10.5"
   },
   "dependencies": {
-    "@dsc/website": "workspace:*",
-    "@dsc/template": "workspace:*"
+    "@dsc/template": "workspace:*",
+    "@dsc/website": "workspace:*"
   },
   "scripts": {
     "build": "ultra -r --build",
