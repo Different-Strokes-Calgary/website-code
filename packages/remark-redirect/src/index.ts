@@ -8,7 +8,7 @@ import { Node } from 'unist';
 import { Definition, Link } from 'mdast';
 
 type LinkNode = Definition | Link
-const urlAbsRegex = /^(\/\/|[a-z]+:)/i
+const urlAbsRegex = /^(\/|[a-z]+:)/i
 
 export default function rename(): Transformer {
   return (tree) => {
