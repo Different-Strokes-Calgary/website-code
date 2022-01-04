@@ -36,6 +36,7 @@
     "remark-directive": "^2.0.1",
     "remark-emoji": "^3.0.2",
     "remark-gfm": "^3.0.1",
+    "remark-redirect": "workspace:*",
     "sass": "^1.43.4",
     "svelte": "^3.34.0",
     "svelte-check": "^2.2.8",

@@ -1,0 +1,31 @@
+{
+  "name": "remark-redirect",
+  "version": "1.0.0",
+  "license": "MIT",
+  "description": "Remark plugin for changing links to markdown files to HTML files.",
+  "author": "Alex Shaw <alex.shaw.as@gmail.com>",
+  "sideEffects": false,
+  "type": "module",
+  "exports": "./lib/index.js",
+  "types": "lib/index.d.ts",
+  "files": [
+    "lib/"
+  ],
+  "keywords": [
+    "remark",
+    "remark-plugin"
+  ],
+  "repository": "https://github.com/Symbitic/remark-plugins/tree/master/packages/remark-redirect",
+  "bugs": "https://github.com/Symbitic/remark-plugins/issues",
+  "scripts": {
+    "build": "tsc"
+  },
+  "dependencies": {
+    "unist-util-visit": "^4.0.0"
+  },
+  "devDependencies": {
+    "@types/unist": "^2.0.6",
+    "typescript": "^4.3.5",
+    "unified": "^10.1.0"
+  }
+}

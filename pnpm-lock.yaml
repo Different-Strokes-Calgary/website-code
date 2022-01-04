@@ -53,6 +53,19 @@ importers:
       tslib: 2.3.1
       tsup: 5.11.10
 
+  packages/remark-redirect:
+    specifiers:
+      '@types/unist': ^2.0.6
+      typescript: ^4.3.5
+      unified: ^10.1.0
+      unist-util-visit: ^4.0.0
+    dependencies:
+      unist-util-visit: 4.1.0
+    devDependencies:
+      '@types/unist': 2.0.6
+      typescript: 4.5.4
+      unified: 10.1.1
+
   packages/svg:
     specifiers:
       '@dsc/configs': workspace:*
@@ -103,6 +116,7 @@ importers:
       remark-directive: ^2.0.1
       remark-emoji: ^3.0.2
       remark-gfm: ^3.0.1
+      remark-redirect: workspace:*
       sass: ^1.43.4
       svelte: ^3.34.0
       svelte-check: ^2.2.8
@@ -140,6 +154,7 @@ importers:
       remark-directive: 2.0.1
       remark-emoji: 3.0.2
       remark-gfm: 3.0.1
+      remark-redirect: link:../remark-redirect
       sass: 1.45.2
       svelte: 3.44.3
       svelte-check: 2.2.11_66db6330e465f871f93322a7a5c0c1f1
@@ -410,7 +425,6 @@ packages:
 
   /@types/unist/2.0.6:
     resolution: {integrity: sha512-PBjIUxZHOuj0R15/xuwJYjFi+KZdNFrehocChv4g5hu6aFroHue8m0lBP0POdK2nKzbw0cgV1mws8+V/JAcEkQ==}
-    dev: true
 
   /@typescript-eslint/eslint-plugin/4.33.0_ed6004e8e200512755a9723d73da9855:
     resolution: {integrity: sha512-aINiAxGVdOl1eJyVjaWn/YcVAq4Gi/Yo35qHGCnqbWVz61g39D0h23veY/MA0rFFGfxK7TySg2uwDeNv+JgVpg==}
@@ -3704,7 +3718,6 @@ packages:
 
   /unist-util-is/5.1.1:
     resolution: {integrity: sha512-F5CZ68eYzuSvJjGhCLPL3cYx45IxkqXSetCcRgUXtbcm50X2L9oOWQlfUfDdAf+6Pd27YDblBfdtmsThXmwpbQ==}
-    dev: true
 
   /unist-util-position/4.0.1:
     resolution: {integrity: sha512-mgy/zI9fQ2HlbOtTdr2w9lhVaiFUHWQnZrFF2EUoVOqtAUdzqMtNiD99qA5a1IcjWVR8O6aVYE9u7Z2z1v0SQA==}
@@ -3734,7 +3747,6 @@ packages:
     dependencies:
       '@types/unist': 2.0.6
       unist-util-is: 5.1.1
-    dev: true
 
   /unist-util-visit/4.1.0:
     resolution: {integrity: sha512-n7lyhFKJfVZ9MnKtqbsqkQEk5P1KShj0+//V7mAcoI6bpbUjh3C/OG8HVD+pBihfh6Ovl01m8dkcv9HNqYajmQ==}
@@ -3742,7 +3754,6 @@ packages:
       '@types/unist': 2.0.6
       unist-util-is: 5.1.1
       unist-util-visit-parents: 5.1.0
-    dev: true
 
   /universalify/0.1.2:
     resolution: {integrity: sha512-rBJeI5CXAlmy1pV+617WB9J63U6XcazHHF2f2dbJix4XzpUF0RS3Zbj0FGIOCAva5P/d/GBOYaACQ1w+0azUkg==}
