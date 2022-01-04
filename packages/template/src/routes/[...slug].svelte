@@ -18,7 +18,7 @@
         }
       }
     } catch {
-      return undefined
+      return;
     }
   }
 </script>

@@ -23,7 +23,7 @@
       {#each pageNames as page}
         {#if page.toLowerCase() !== 'index'}
           <NavItem>
-            <NavLink href={page}>{page}</NavLink>
+            <NavLink href="/{page}">{page}</NavLink>
           </NavItem>
         {/if}
       {/each}
